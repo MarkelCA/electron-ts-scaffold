@@ -6,8 +6,15 @@
 
   </head>
   <body>
+      <script>
+          function openWindow2() {
+              window.api.openWindow2();
+          }
+      </script>
+
     <h1>💖 Hello World!</h1>
     <p>Welcome to your Electron application.</p>
     <script type="module" src="/src/renderer.ts"></script>
+    <button onclick="openWindow2()">Open Window 2</button>
   </body>
 </html>
