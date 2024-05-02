@@ -15,6 +15,10 @@ let currentWindow: BrowserWindow | null = null;
 app.on('ready', () => {
     currentWindow = createWindow();
 
+    ipcMain.on('open-window', () => {
+        replaceWindow(createWindow());
+    });
+
     ipcMain.on('open-window2', () => {
         replaceWindow(createWindow2());
     });
