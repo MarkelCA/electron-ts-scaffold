@@ -1,6 +1,7 @@
 import type { ConfigEnv, UserConfig } from 'vite';
 import { defineConfig, mergeConfig } from 'vite';
 import { getBuildConfig, external, pluginHotRestart } from './vite.base.config';
+import {resolve} from 'path';
 
 // https://vitejs.dev/config
 export default defineConfig((env) => {
@@ -11,7 +12,11 @@ export default defineConfig((env) => {
       rollupOptions: {
         external,
         // Preload scripts may contain Web assets, so use the `build.rollupOptions.input` instead `build.lib.entry`.
-        input: forgeConfigSelf.entry!,
+        // input: forgeConfigSelf.entry!,
+        input : {
+            preload: resolve(__dirname, 'src/windows/home/preload.ts'),
+        //     preload2: resolve(__dirname, 'src/windows/list/preload.ts'),
+        },
         output: {
           format: 'cjs',
           // It should not be split chunks.
