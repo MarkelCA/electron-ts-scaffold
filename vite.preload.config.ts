@@ -12,10 +12,9 @@ export default defineConfig((env) => {
       rollupOptions: {
         external,
         // Preload scripts may contain Web assets, so use the `build.rollupOptions.input` instead `build.lib.entry`.
-        // input: forgeConfigSelf.entry!,
         input : {
-            preload: resolve(__dirname, 'src/windows/home/preload.ts'),
-        //     preload2: resolve(__dirname, 'src/windows/list/preload.ts'),
+            // preload2: resolve(__dirname, 'src/windows/list/preload2.ts'),
+            preload: resolve(__dirname, 'src/windows/home/preloadx.ts'),
         },
         output: {
           format: 'cjs',

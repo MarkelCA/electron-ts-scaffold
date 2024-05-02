@@ -7,7 +7,7 @@ export function createWindow2(): BrowserWindow {
     width: 800,
     height: 600,
     webPreferences: {
-      preload: path.join(__dirname, '/src/windows/list/preload.ts'),
+      preload: path.join(__dirname, 'preload2.js'),
     },
   })
   if (MAIN_WINDOW_VITE_DEV_SERVER_URL) {
