@@ -1,6 +1,6 @@
 import { app, BrowserWindow, ipcMain } from 'electron';
-import { createWindow } from './modules/home/main';
-import { createWindow2 } from './modules/list/main';
+import { createHome } from './modules/home/main';
+import { createList } from './modules/list/main';
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) {
@@ -13,19 +13,15 @@ let currentWindow: BrowserWindow | null = null;
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.on('ready', () => {
-    currentWindow = createWindow();
+    currentWindow = createHome();
 
-    ipcMain.on('open-window', () => {
-        replaceWindow(createWindow());
-    });
-
-    ipcMain.on('open-window2', () => {
-        replaceWindow(createWindow2());
+    ipcMain.on('open-home', () => {
+        replaceWindow(createHome());
     });
      
 
-    ipcMain.on('open-home', () => {
-        replaceWindow(createWindow());
+    ipcMain.on('open-list', () => {
+        replaceWindow(createList());
     });
 });
 

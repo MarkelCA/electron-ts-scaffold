@@ -4,5 +4,7 @@ declare global {
     interface Window {
         api: ApiExtension
     }
-    interface ApiExtension {}
+    interface ApiExtension {
+        openHome: () => void
+    }
 }

@@ -2,6 +2,6 @@ export {}
 
 declare global {
     interface ApiExtension {
-        openWindow2: () => void;
+        openList: () => void;
     }
 }

@@ -1,7 +1,7 @@
 import {BrowserWindow} from 'electron';
 import path from 'path';
 
-export function createWindow2(): BrowserWindow {
+export function createList(): BrowserWindow {
   const win = new BrowserWindow({ 
     width: 800,
     height: 600,

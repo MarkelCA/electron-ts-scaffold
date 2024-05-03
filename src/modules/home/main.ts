@@ -1,7 +1,7 @@
 import { BrowserWindow } from "electron";
 import path from "path";
 
-export const createWindow = (): BrowserWindow => {
+export const createHome = (): BrowserWindow => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     width: 800,
