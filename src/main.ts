@@ -23,6 +23,10 @@ app.on('ready', () => {
         replaceWindow(createWindow2());
     });
      
+
+    ipcMain.on('open-home', () => {
+        replaceWindow(createWindow());
+    });
 });
 
 function replaceWindow(window: BrowserWindow) {

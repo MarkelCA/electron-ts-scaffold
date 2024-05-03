@@ -1,2 +1,6 @@
-console.log('list preload.ts loaded')
+import { contextBridge, ipcRenderer } from 'electron';
+
+contextBridge.exposeInMainWorld('api', {
+    openHome: () => ipcRenderer.send('open-home')
+});
 
