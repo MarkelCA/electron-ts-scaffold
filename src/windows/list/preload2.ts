@@ -1,2 +1,2 @@
-console.log('list preload.ts loadedn')
+console.log('list preload.ts loaded')
 

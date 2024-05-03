@@ -8,7 +8,7 @@ contextBridge.exposeInMainWorld('api', {
     openWindow2: () => ipcRenderer.send('open-window2')
 });
 
-console.log('preloadx.ts loaded');
+console.log('preloadx.ts loadedt');
 
 declare global {
     interface Window {
