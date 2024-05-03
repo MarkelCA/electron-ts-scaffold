@@ -24,11 +24,15 @@ const config: ForgeConfig = {
           config: 'vite.main.config.ts',
         },
         {
-          entry: 'src/windows/home/preload.ts',
+          entry: {
+              'windows/home/preload' : 'src/windows/home/preload.ts'
+           },
           config: 'vite.preload.config.ts',
         },
         {
-          entry: 'src/windows/list/preload2.ts',
+          entry: {
+              'windows/list/preload': 'src/windows/list/preload.ts'
+          },
           config: 'vite.preload.config.ts',
         },
       ],
