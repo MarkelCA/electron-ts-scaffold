@@ -1,7 +1,7 @@
 export {}
 
 declare global {
-    interface Window {
-        openHome: () => void
+    interface ApiExtension {
+        openHome: () => void;
     }
 }
