@@ -37,10 +37,18 @@ const config: ForgeConfig = {
         },
       ],
       renderer: [
+        // {
+        //   name: 'main_window',
+        //   config: 'vite.renderer.config.ts',
+        // },
         {
-          name: 'main_window',
-          config: 'vite.renderer.config.ts',
+            name: 'main_window',
+            config: 'vite.renderer-home.config.ts',
         },
+        {
+            name: 'list_window',
+            config: 'vite.renderer-list.config.ts',
+        }
       ],
     }),
     // Fuses are used to enable/disable various Electron functionality
