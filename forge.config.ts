@@ -24,7 +24,7 @@ const config: ForgeConfig = {
           config: 'vite.main.config.ts',
         },
         {
-          entry: 'src/windows/home/preloadx.ts',
+          entry: 'src/windows/home/preload.ts',
           config: 'vite.preload.config.ts',
         },
         {

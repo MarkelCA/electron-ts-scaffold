@@ -10,11 +10,3 @@ contextBridge.exposeInMainWorld('api', {
 
 console.log('preloadx.ts loadedt');
 
-declare global {
-    interface Window {
-        api: {
-            openWindow2: () => void;
-        };
-    }
-}
-
