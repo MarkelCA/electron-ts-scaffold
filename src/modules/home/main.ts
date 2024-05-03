@@ -7,15 +7,15 @@ export const createWindow = (): BrowserWindow => {
     width: 800,
     height: 600,
     webPreferences: {
-      preload: path.join(__dirname, 'windows/home/preload.js'),
+      preload: path.join(__dirname, 'modules/home/preload.js'),
     },
   });
 
   // and load the index.html of the app.
   if (MAIN_WINDOW_VITE_DEV_SERVER_URL) {
-    mainWindow.loadURL(`${MAIN_WINDOW_VITE_DEV_SERVER_URL}/src/windows/home/index.html`);
+    mainWindow.loadURL(`${MAIN_WINDOW_VITE_DEV_SERVER_URL}/src/modules/home/index.html`);
   } else {
-    mainWindow.loadFile(path.join(__dirname, `../renderer/${MAIN_WINDOW_VITE_NAME}/src/windows/home/index.html`));
+    mainWindow.loadFile(path.join(__dirname, `../renderer/${MAIN_WINDOW_VITE_NAME}/src/modules/home/index.html`));
   }
 
   // Open the DevTools.

@@ -1,6 +1,6 @@
 import { app, BrowserWindow, ipcMain } from 'electron';
-import { createWindow } from './windows/home/main';
-import { createWindow2 } from './windows/list/main';
+import { createWindow } from './modules/home/main';
+import { createWindow2 } from './modules/list/main';
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) {
