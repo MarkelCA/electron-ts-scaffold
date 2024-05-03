@@ -1,7 +1,7 @@
 export {}
 
 declare global {
-    interface ApiExtension {
+    interface IPCApi {
         openList: () => void;
     }
 }

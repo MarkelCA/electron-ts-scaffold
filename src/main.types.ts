@@ -2,9 +2,9 @@ export {}
 
 declare global {
     interface Window {
-        api: ApiExtension
+        api: IPCApi
     }
-    interface ApiExtension {
+    interface IPCApi {
         openHome: () => void
     }
 }
