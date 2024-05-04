@@ -10,9 +10,9 @@ export function createList(): BrowserWindow {
     },
   })
   if (MAIN_WINDOW_VITE_DEV_SERVER_URL) {
-        win.loadURL(`${MAIN_WINDOW_VITE_DEV_SERVER_URL}/src/modules/list/list.html`);
+        win.loadURL(`${MAIN_WINDOW_VITE_DEV_SERVER_URL}/src/modules/list/index.html`);
   } else {
-    win.loadFile(path.join(__dirname, `../renderer/${MAIN_WINDOW_VITE_NAME}/src/modules/list/list.html`));
+    win.loadFile(path.join(__dirname, `../renderer/list_window/src/modules/list/index.html`));
   }
   win.webContents.openDevTools(); 
   return win;

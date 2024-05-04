@@ -12,10 +12,11 @@ export default defineConfig((env) => {
     return {
         root,
         mode,
+        base: './',
         build: {
             rollupOptions: {
                 input: {
-                    list: path.join(__dirname, 'src/modules/list/list.html'),
+                    list: path.join(__dirname, '/src/modules/list/index.html'),
                 }
             },
           outDir: `.vite/renderer/${name}`,
