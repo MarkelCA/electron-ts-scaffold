@@ -3,11 +3,11 @@
 //
 
 import { contextBridge,ipcRenderer } from 'electron';
-// import {ipcHandler} from '../../ipc';
+import {IPCChannel} from '../../constants'
 
 contextBridge.exposeInMainWorld('api', {
     // openList: () => ipcHandler(ipcRenderer,IPCChannel.OPEN_LIST)
-    openList: () => ipcRenderer.send('open-list')
+    openList: () => ipcRenderer.send(IPCChannel.OPEN_LIST)
 });
 
 console.log('home preload loadedt');

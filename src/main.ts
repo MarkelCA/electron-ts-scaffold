@@ -1,6 +1,8 @@
 import { app, BrowserWindow, ipcMain } from 'electron';
 import { createHome } from './modules/home/main';
 import { createList } from './modules/list/main';
+import { IPCChannel } from './constants';
+
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) {
@@ -15,12 +17,12 @@ let currentWindow: BrowserWindow | null = null;
 app.on('ready', () => {
     currentWindow = createHome();
 
-    ipcMain.on('open-home', () => {
+    ipcMain.on(IPCChannel.OPEN_HOME, () => {
         replaceWindow(createHome());
     });
      
 
-    ipcMain.on('open-list', () => {
+    ipcMain.on(IPCChannel.OPEN_LIST, () => {
         replaceWindow(createList());
     });
 });
